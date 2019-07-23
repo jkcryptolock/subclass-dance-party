@@ -1,5 +1,6 @@
 body, html{
   height:100%;
+  background-image: url("./images/background.png");
 }
 body{
   margin: 0px;
@@ -20,8 +21,35 @@ body, a:link, a:visited, a:active{
 .title{
   background-color: #777;
 }
+
+@keyframes example {
+  0%   {left:0px; top:0px;}
+  25%  {left:0px; top:200px;}
+  50%  {left:200px; top:200px;}
+  75%  {left:200px; top:0px;}
+  100% {left:0px; top:0px;}
+}
 .dancer{
   border:10px solid red;
   border-radius:10px;
   position:absolute;
+}
+
+.buu{
+  position: absolute;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+.goku{
+  position: absolute;
+}
+
+.frieza{
+  position: absolute;
+}
+
+.android{
+  position: absolute;
 }
