@@ -1,5 +1,8 @@
 body, html{
-  height:100%;
+  height: 95%;
+  width: 100%;
+  background-image: url("./images/background.png");
+  
 }
 body{
   margin: 0px;
@@ -11,7 +14,7 @@ body, a:link, a:visited, a:active{
 }
 .title, .addDancerButton{
   padding:5px 12px;
-  float:right;
+  text-align: right;
 }
 .topbar{
   height:32px;
@@ -20,8 +23,64 @@ body, a:link, a:visited, a:active{
 .title{
   background-color: #777;
 }
+
+@keyframes move {
+  0%  {transform: translateX(0px);}
+  50% {transform: translateX(100px);}
+  100%{transform: translateX(0px);}
+}
+
+@keyframes fade {
+  0%   {opacity: 0; }
+  100% {opacity: 1; }
+}
+
+@keyframes spin {
+ 100% { web-kit: rotate(360deg);
+        transform: rotate(360deg);
+      }
+}
+
+@keyframes scale {
+  50%  {transform: scale(1.5, 1.5)}
+  100% {transform: scale(1, 1)}
+}
+
+@keyframes dimensional {
+  50%  {transform: rotateY(180deg)};
+  100% {transform: rotateY(0deg)};
+}
+
 .dancer{
   border:10px solid red;
   border-radius:10px;
   position:absolute;
+}
+
+.buu {
+  position: relative;
+  animation-name: fade;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+.goku{
+  height: 20%;
+  position: absolute;
+  animation: spin 4s linear infinite;
+}
+
+.frieza{
+  position: absolute;
+  animation: scale 4s infinite;
+}
+
+.android{
+  position: absolute;
+  animation: dimensional 4s infinite;
+}
+
+.vegeta{
+  position: absolute;
+  animation: move 4s infinite;
 }
